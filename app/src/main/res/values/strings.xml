@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Navigation</string>
+    <string name="access_token" translatable="false">pk.eyJ1IjoicHJpdGFtMTQzIiwiYSI6ImNqZmR0cmxsejFydmUycW1zamljaDY1dXYifQ.4MDCnCrRYGnRrvO6oN7K_w</string>
+</resources>

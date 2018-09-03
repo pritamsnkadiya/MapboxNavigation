@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:padding="5px"
+        android:layout_margin="20px"
+        android:text="Start navigation"
+        android:background="@color/mapboxGrayLight"
+        android:textColor="@color/mapboxWhite"
+        android:visibility="gone"
+        android:enabled="false"/>
+    <LinearLayout
+        android:id="@+id/hideLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/GeoPlace"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btnGeoPlace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="searchPlace"
+            android:hint="Search"/>
+    </LinearLayout>
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        mapbox:mapbox_cameraTargetLat="20.5937"
+        mapbox:mapbox_cameraTargetLng="78.9629"
+        mapbox:mapbox_styleUrl="mapbox://styles/mapbox/streets-v10"
+        mapbox:mapbox_cameraZoom="8" />
+</LinearLayout>
